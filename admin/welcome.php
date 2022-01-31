@@ -17,7 +17,7 @@ else {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Welcome to Employee Rocord Management System </title>
+  <title>Welcome to Farmer Record Management System </title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -52,7 +52,7 @@ else {
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Employee Record Management System</h1>
+            <h1 class="h3 mb-0 text-gray-800">Farmer Record Management System</h1>
                    </div>
 
           <!-- Content Row -->
@@ -64,7 +64,7 @@ else {
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Welcome Back to ERMS !</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Welcome Back to FRMS !</div>
 
                       <?php
 $adminid=$_SESSION['aid'];
