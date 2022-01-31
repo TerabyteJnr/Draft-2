@@ -12,8 +12,8 @@ if(isset($_GET['delid']))
   {
     $eid=$_GET['delid'];
     $query=mysqli_query($con,"delete employeedetail,empexpireince,empeducation from employeedetail
-left join empexpireince on empexpireince.EmpID=employeedetail.ID
-left join empeducation on empeducation.EmpID=employeedetail.ID
+left join empexpireince on empexpireince.FrmID=employeedetail.ID
+left join empeducation on empeducation.FrmID=employeedetail.ID
 where employeedetail.ID='$eid'");
     echo "<script>alert('Record Deleted successfully');</script>";
     echo "<script>window.location.href='allemployees.php'</script>";
@@ -31,7 +31,7 @@ where employeedetail.ID='$eid'");
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Employees Details</title>
+  <title>Farmer Details</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -65,7 +65,7 @@ where employeedetail.ID='$eid'");
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Employees Details</h1>
+          <h1 class="h3 mb-4 text-gray-800">Farmers Details</h1>
 
 <p style="font-size:16px; color:red" align="center"> <?php if($msg){
     echo $msg;
@@ -76,12 +76,16 @@ where employeedetail.ID='$eid'");
 
 <tr>
   <th>S no.</th>
-  <th>Emp Code</th>
-  <th>Emp First Name</th>
-  <th>Emp Last Name</th>
-  <th>Emp Email</th>
-  <th>Emp Contact no</th>
-  <th>Emp Joining Date</th>
+  <th>Farmer Code</th>
+  <th>Farmer First Name</th>
+  <th>Farmer Last Name</th>
+  <th>Farmer Age</th>
+  <th>Farmer Gender</th>
+  <th>Farmer DOB</th>
+  <th>Farmer Region</th>
+  <th>Farmer Email</th>
+  <th>Farmer Contact no</th>
+  <th>Aggregater/Distributor</th>
   <th>Action</th>
   
 </tr>
@@ -95,12 +99,16 @@ while ($row=mysqli_fetch_array($ret)) {
 
 <tr>
   <td><?php echo $cnt;?></td>
-  <td><?php  echo $row['EmpCode'];?></td>
-   <td><?php echo $row['EmpFname'];?></td>
-    <td><?php echo $row['EmpLName'];?></td>
-  <td><?php echo $row['EmpEmail'];?></td>
-  <td><?php echo $row['EmpContactNo'];?></td>
-  <td><?php echo $row['EmpJoingdate'];?></td>
+  <td><?php  echo $row['FrmCode'];?></td>
+   <td><?php echo $row['FrmFname'];?></td>
+    <td><?php echo $row['FrmLName'];?></td>
+    <td><?php echo $row['FrmAge'];?></td>
+    <td><?php echo $row['FrmGender'];?></td>
+    <td><?php echo $row['FrmDOB'];?></td>
+    <td><?php echo $row['FrmRegion'];?></td>
+  <td><?php echo $row['FrmEmail'];?></td>
+  <td><?php echo $row['FrmContactNo'];?></td>
+  <td><?php echo $row['Aggregator'];?></td>
   <td><a href="editempprofile.php?editid=<?php echo $row['ID'];?>">Edit Profile Details</a> | 
    <a href="editempeducation.php?editid=<?php echo $row['ID'];?>">Edit Education Details</a> |
     <a href="editempexp.php?editid=<?php echo $row['ID'];?>">Edit Experience Details</a>  |

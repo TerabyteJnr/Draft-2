@@ -31,7 +31,7 @@ if(isset($_POST['login']))
   <meta name="description" content="Employee Record management System in php and mysql">
   <meta name="author" content="Sarita Pandey">
 
-  <title>ERMS Admin Login</title>
+  <title>FRMS Admin Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,7 +45,7 @@ if(isset($_POST['login']))
 <body class="bg-gradient-primary">
 
   <div class="container">
-      <h3 align="center" style="color: black; padding-top: 2%">Employee Record Managment System</h3>
+      <h3 align="center" style="color: black; padding-top: 2%">Farmer Record Managment System</h3>
 
     <!-- Outer Row -->
     <div class="row justify-content-center">

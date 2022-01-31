@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
     
      $query=mysqli_query($con, "update empexpireince set Employer1Name='$emp1name',  Employer1Designation ='$emp1des', Employer1CTC ='$emp1ctc', Employer1WorkDuration='$emp1wd', Employer2Name='$emp2name',  Employer2Designation ='$emp2des', Employer2CTC ='$emp2ctc', Employer2WorkDuration='$emp2wd', Employer3Name='$emp3name',  Employer3Designation ='$emp3des', Employer3CTC ='$emp3ctc', Employer3WorkDuration='$emp3wd'  where EmpID='$eid'");
     if ($query) {
-    $msg="Employee Expirence has been updated.";
+    $msg="Farmer Expirence has been updated.";
   }
   else
     {
@@ -46,7 +46,7 @@ if(isset($_POST['submit']))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Edit Employee Expirence</title>
+  <title>Edit Farmer Expirence</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -80,7 +80,7 @@ if(isset($_POST['submit']))
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Edit Employee Expirence</h1>
+          <h1 class="h3 mb-4 text-gray-800">Edit Farmer Expirence</h1>
 
 <p style="font-size:16px; color:red" align="center"> <?php if($msg){
     echo $msg;
@@ -89,7 +89,7 @@ if(isset($_POST['submit']))
 <form class="user" method="post" action="">
   <?php
  $aid=$_GET['editid'];
-$ret=mysqli_query($con,"select * from empexpireince where EmpID='$aid'");
+$ret=mysqli_query($con,"select * from empexpireince where FrmID='$aid'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 

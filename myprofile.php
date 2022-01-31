@@ -14,13 +14,13 @@ if(isset($_POST['submit']))
     $eid=$_SESSION['uid'];
     $FName=$_POST['FirstName'];
     $LName=$_POST['LastName'];
-    $empcode=$_POST['EmpCode'];
-    $EmpDept=$_POST['EmpDept'];
-    $EmpDesignation=$_POST['EmpDesignation'];
-    $EmpContactNo=$_POST['EmpContactNo'];
+    $empcode=$_POST['FrmCode'];
+    $EmpDept=$_POST['Aggregator'];
+    $EmpDesignation=$_POST['FrmRegion'];
+    $FrmContactNo=$_POST['FrmContactNo'];
     $gender=$_POST['gender'];
     $empjdate=$_POST['EmpJoingdate'];
-     $query=mysqli_query($con, "update employeedetail set EmpFname='$FName',  EmpLName='$LName', EmpCode='$empcode', EmpDept='$EmpDept', EmpDesignation='$EmpDesignation', EmpContactNo='$EmpContactNo', EmpGender='$gender',EmpJoingdate='$empjdate' where ID='$eid'");
+     $query=mysqli_query($con, "update employeedetail set FrmFname='$FName',  FrmLName='$LName', FrmCode='$frmcode', Aggregator='$Aggregator', FrmRegion='$FrmRegion', FrmContactNo='$FrmContactNo', FrmGender='$gender',EmpJoingdate='$empjdate' where ID='$eid'");
     if ($query) {
     $msg="Your profile has been updated.";
   }
@@ -92,41 +92,41 @@ while ($row=mysqli_fetch_array($ret)) {
 ?>
                <div class="row">
                 <div class="col-4 mb-3">First Name</div>
-                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="FirstName" name="FirstName" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpFname'];?>"></div>
+                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="FirstName" name="FirstName" aria-describedby="emailHelp" required="true" value="<?php  echo $row['FrmFname'];?>"></div>
                     </div>  
                     <div class="row">
                       <div class="col-4 mb-3">Last Name </div>
-                     <div class="col-8 mb-3">  <input type="text" class="form-control form-control-user" id="LastName" name="LastName" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpLName'];?>"></div>  
+                     <div class="col-8 mb-3">  <input type="text" class="form-control form-control-user" id="LastName" name="LastName" aria-describedby="emailHelp" required="true" value="<?php  echo $row['FrmLName'];?>"></div>  
                      </div>
 
 
 
                     <div class="row">
-                    <div class="col-4 mb-3">Employee Code </div>
+                    <div class="col-4 mb-3">Farmer Code </div>
                     <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpCode" name="EmpCode" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpCode'];?>"></div>
+                      <input type="text" class="form-control form-control-user" id="FrmCode" name="FrmCode" aria-describedby="emailHelp" required="true" value="<?php  echo $row['FrmCode'];?>"></div>
                     </div>
 
                     <div class="row">
                       <div class="col-4 mb-3">Employee Dept</div>
                      <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpDept" name="EmpDept" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpDept'];?>">
+                      <input type="text" class="form-control form-control-user" id="Aggregator" name="Aggregator" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpDept'];?>">
                     </div></div>
                     <div class="row">
                     <div class="col-4 mb-3">Employee Desigantion</div>
 
                     <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpDesignation" name="EmpDesignation" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpDesignation'];?>">
+                      <input type="text" class="form-control form-control-user" id="FrmRegion" name="FrmRegion" aria-describedby="emailHelp" required="true" value="<?php  echo $row['FrmRegion'];?>">
                     </div></div>
                     <div class="row">
                       <div class="col-4 mb-3">Employee Contact No.</div>
                     <div class="col-8 mb-3">
-                      <input type="text" class="form-control form-control-user" id="EmpContactNo" name="EmpContactNo" aria-describedby="emailHelp" required="true" value="<?php  echo $row['EmpContactNo'];?>">
+                      <input type="text" class="form-control form-control-user" id="FrmContactNo" name="FrmContactNo" aria-describedby="emailHelp" required="true" value="<?php  echo $row['FrmContactNo'];?>">
                     </div></div>
                     <div class="row">
                     <div class="col-4 mb-3">Email</div>
                    <div class="col-8 mb-3">
-                      <input type="email" class="form-control form-control-user" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter Email Address..." required="true" value="<?php  echo $row['EmpEmail'];?>" readonly="true">
+                      <input type="email" class="form-control form-control-user" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter Email Address..." required="true" value="<?php  echo $row['FrmEmail'];?>" readonly="true">
                     </div></div>
                 
                     <div class="row">
@@ -138,12 +138,12 @@ while ($row=mysqli_fetch_array($ret)) {
                       <div class="col-4 mb-3">Gender</div>
                     <div class="col-4 mb-3">
                     
-<?php if($row['EmpGender']=="Male")
+<?php if($row['FrmGender']=="Male")
 {?>
                       <input type="radio" id="gender" name="gender" value="Male" checked="true">Male
 
                      <input type="radio" name="gender" value="Female">Female
-                   <?php }   else if($row['EmpGender']=="Female") {?>
+                   <?php }   else if($row['FrmGender']=="Female") {?>
  <input type="radio" id="gender" name="gender" value="Male" >Male
   <input type="radio" name="gender" value="Female" checked="true">Female
                    <?php } else { ?>

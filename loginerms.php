@@ -7,7 +7,7 @@ if(isset($_POST['login']))
   {
     $Email=$_POST['Email'];
     $Password=$_POST['Password'];
-    $query=mysqli_query($con,"select ID from employeedetail where  EmpEmail='$Email' && EmpPassword='$Password' ");
+    $query=mysqli_query($con,"select ID from employeedetail where  FrmEmail='$Email' && FrmPassword='$Password' ");
     $ret=mysqli_fetch_array($query);
     if($ret>0){
       $_SESSION['uid']=$ret['ID'];
@@ -32,7 +32,7 @@ if(isset($_POST['login']))
   <meta name="description" content="Employee Record management System in php and mysql">
   <meta name="author" content="Sarita Pandey">
 
-  <title>ERMS Employee Login</title>
+  <title>FRMS Farmer Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -46,7 +46,7 @@ if(isset($_POST['login']))
 <body class="bg-gradient-primary">
 
   <div class="container">
-    <h3 align="center" style="color: black; padding-top: 2%">Employee Record Managment System</h3>
+    <h3 align="center" style="color: black; padding-top: 2%">Farmer Record Managment System</h3>
 
     <!-- Outer Row -->
     <div class="row justify-content-center">

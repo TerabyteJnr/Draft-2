@@ -17,7 +17,7 @@ else {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Welcome to ERMS</title>
+  <title>Welcome to FRMS</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -52,7 +52,7 @@ else {
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Employee Record Management System</h1>
+            <h1 class="h3 mb-0 text-gray-800">Farm Record Management System</h1>
                    </div>
 
           <!-- Content Row -->
@@ -64,14 +64,14 @@ else {
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Welcome Back to ERMS !</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Welcome Back to FRMS !</div>
 
                       <?php
-$empid=$_SESSION['uid'];
-$ret=mysqli_query($con,"select EmpFname,EmpLname from employeedetail where ID='$empid'");
+$frmid=$_SESSION['uid'];
+$ret=mysqli_query($con,"select FrmFname,FrmLname from employeedetail where ID='$frmid'");
 $row=mysqli_fetch_array($ret);
-$fname=$row['EmpFname'];
-$lname=$row['EmpLname'];
+$fname=$row['FrmFname'];
+$lname=$row['FrmLname'];
 ?>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $fname." ".$lname; ?></div>
                     </div>
