@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
     $emp3ctc=$_POST['emp3ctc'];
     $emp3wd=$_POST['emp3workduration'];
     
-     $query=mysqli_query($con, "update empexpireince set Employer1Name='$emp1name',  Employer1Designation ='$emp1des', Employer1CTC ='$emp1ctc', Employer1WorkDuration='$emp1wd', Employer2Name='$emp2name',  Employer2Designation ='$emp2des', Employer2CTC ='$emp2ctc', Employer2WorkDuration='$emp2wd', Employer3Name='$emp3name',  Employer3Designation ='$emp3des', Employer3CTC ='$emp3ctc', Employer3WorkDuration='$emp3wd'  where EmpID='$eid'");
+     $query=mysqli_query($con, "update empexpireince set Employer1Name='$emp1name',  Employer1Designation ='$emp1des', Employer1CTC ='$emp1ctc', Employer1WorkDuration='$emp1wd', Employer2Name='$emp2name',  Employer2Designation ='$emp2des', Employer2CTC ='$emp2ctc', Employer2WorkDuration='$emp2wd', Employer3Name='$emp3name',  Employer3Designation ='$emp3des', Employer3CTC ='$emp3ctc', Employer3WorkDuration='$emp3wd'  where FrmID='$eid'");
     if ($query) {
     $msg="Your Expirence has been updated.";
   }
@@ -88,8 +88,8 @@ if(isset($_POST['submit']))
 
 <form class="user" method="post" action="">
   <?php
- $empid=$_SESSION['uid'];
-$ret=mysqli_query($con,"select * from empexpireince where EmpID='$empid'");
+ $frmid=$_SESSION['uid'];
+$ret=mysqli_query($con,"select * from empexpireince where FrmID='$frmid'");
 $num=mysqli_num_rows($ret);
 if($num>0){
 $cnt=1;

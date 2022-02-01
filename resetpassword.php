@@ -9,9 +9,9 @@ header('location:forgetpassword.php');
 if(isset($_POST['submit']))
   {
     $email=$_SESSION['email'];
-    $empid=$_SESSION['empid'];
+    $frmid=$_SESSION['frmid'];
     $password=$_POST['newpassword'];
-    $query=mysqli_query($con,"update employeedetail set EmpPassword='$password'  where  EmpEmail='$email' && EmpCode='$empid' ");
+    $query=mysqli_query($con,"update employeedetail set FrmPassword='$password'  where  FrmEmail='$email' && FrmCode='$frmid' ");
    if($query)
    {
 echo "<script>alert('Password successfully changed');</script>";
@@ -34,7 +34,7 @@ session_destroy();
   <meta name="description" content="Employee Record management System in php and mysql">
   <meta name="author" content="Sarita Pandey">
 
-  <title>ERMS Employee Reset</title>
+  <title>FRMS Farmer Reset</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -61,7 +61,7 @@ return true;
 <body class="bg-gradient-primary">
 
   <div class="container">
-    <h3 align="center" style="color: black; padding-top: 2%">Employee Record Managment System</h3>
+    <h3 align="center" style="color: black; padding-top: 2%">Farmer Record Managment System</h3>
 
     <!-- Outer Row -->
     <div class="row justify-content-center">

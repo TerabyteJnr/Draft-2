@@ -36,11 +36,11 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <?php
-$empid=$_SESSION['uid'];
-$ret=mysqli_query($con,"select EmpFname,EmpLname from employeedetail where ID='$empid'");
+$frmid=$_SESSION['uid'];
+$ret=mysqli_query($con,"select FrmFname,FrmLname from employeedetail where ID='$frmid'");
 $row=mysqli_fetch_array($ret);
-$fname=$row['EmpFname'];
-$lname=$row['EmpLname'];
+$fname=$row['FrmFname'];
+$lname=$row['FrmLname'];
 ?>
 
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $fname." ".$lname; ?></span>

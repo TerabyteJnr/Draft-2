@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">ERMS Admin</div>
+        <div class="sidebar-brand-text mx-3">FRMS Admin</div>
       </a>
 
       <!-- Divider -->
@@ -35,7 +35,7 @@
       <li class="nav-item">
         <a class="nav-link" href="allemployees.php">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>All Employees</span></a>
+          <span>All Farmers</span></a>
       </li>
       
     

@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
     $emp3ctc=$_POST['emp3ctc'];
     $emp3wd=$_POST['emp3workduration'];
     
-     $query=mysqli_query($con, "insert into empexpireince ( EmpID,Employer1Name, Employer1Designation, Employer1CTC,  Employer1WorkDuration, Employer2Name,  Employer2Designation, Employer2CTC, Employer2WorkDuration, Employer3Name, Employer3Designation, Employer3CTC, Employer3WorkDuration) value('$eid','$emp1name', '$emp1des', '$emp1ctc', '$emp1wd', '$emp2name', '$emp2des', '$emp2ctc', '$emp2wd', '$emp3name', '$emp3des', '$emp3ctc', '$emp3wd' )");
+     $query=mysqli_query($con, "insert into empexpireince ( FrmID,Employer1Name, Employer1Designation, Employer1CTC,  Employer1WorkDuration, Employer2Name,  Employer2Designation, Employer2CTC, Employer2WorkDuration, Employer3Name, Employer3Designation, Employer3CTC, Employer3WorkDuration) value('$eid','$emp1name', '$emp1des', '$emp1ctc', '$emp1wd', '$emp2name', '$emp2des', '$emp2ctc', '$emp2wd', '$emp3name', '$emp3des', '$emp3ctc', '$emp3wd' )");
     if ($query) {
     $msg="Your Expirence data has been submitted succeesfully.";
   }
@@ -87,8 +87,8 @@ if(isset($_POST['submit']))
   }  ?> </p>
 
   <?php 
-$empid=$_SESSION['uid'];
-$query=mysqli_query($con,"select * from empexpireince where EmpID=$empid");
+$frmid=$_SESSION['uid'];
+$query=mysqli_query($con,"select * from empexpireince where FrmID=$frmid");
 $row=mysqli_fetch_array($query);
 if($row>0)
 {

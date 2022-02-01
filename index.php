@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>ERMS | Home Page</title>
+  <title>FRMS | Home Page</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top: 2%">
-            <h1 class="h3 mb-0 text-gray-800">Employee Record Management System</h1>
+            <h1 class="h3 mb-0 text-gray-800">Farmer Record Management System</h1>
           </div>
 
           <div class="row">
